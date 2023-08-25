@@ -13,6 +13,7 @@
     ],
     "require": {
         "coffeecode/router": "^2.0",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "doctrine/orm": "2.16.1"
     }
 }
