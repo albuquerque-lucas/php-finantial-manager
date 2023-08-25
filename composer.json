@@ -14,6 +14,9 @@
     "require": {
         "coffeecode/router": "^2.0",
         "vlucas/phpdotenv": "^5.5",
-        "doctrine/orm": "2.16.1"
+        "doctrine/orm": "2.16.1",
+        "doctrine/dbal": "^3.2",
+        "symfony/yaml": "^5.4",
+        "symfony/cache": "^5.4"
     }
 }
