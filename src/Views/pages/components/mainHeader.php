@@ -19,7 +19,7 @@
       <a href="/projects">Projetos</a>
     </li>
         <li>
-      <a href="/financial">Financeiro</a>
+      <a href="/financial">Gerenciamento</a>
     </li>
         <li>
       <a href="/contact">Contato</a>
