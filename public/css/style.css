@@ -1,0 +1,74 @@
+.body {
+  background-color: rgb(10, 11, 12);
+  color: rgb(200, 200, 200);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.header {
+  align-items: center;
+  background-color: rgb(10, 11, 12);
+  border-bottom: 2px solid white;
+  display: flex;
+  height: 15vh;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 0 5rem;
+}
+.header h1:hover {
+  color: rgb(255, 255, 255);
+}
+.header nav {
+  width: 50%;
+}
+.header nav ul {
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  height: 4rem;
+  justify-content: center;
+}
+.header nav ul li {
+  margin-left: 2rem;
+}
+
+.main {
+  align-items: center;
+  background-color: rgb(30, 33, 36);
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  margin: 0 7rem;
+}
+
+.main-div-default {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 40vh;
+  text-align: center;
+  width: 100%;
+}
+
+.main-footer {
+  background-color: rgba(10, 11, 12, 0.5);
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 1rem 2rem;
+}
+.main-footer p {
+  margin-top: 1rem;
+}
+.main-footer p:hover {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

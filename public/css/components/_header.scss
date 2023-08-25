@@ -1,0 +1,32 @@
+@import '../abstract/variables';
+
+.header {
+  align-items: center;
+  background-color: $background-primary;
+  border-bottom: 2px solid white;
+  display: flex;
+  height: $header-default-height;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 0 5rem;
+
+  h1{
+    &:hover{
+      color: $letters-hover-primary;
+    }
+  }
+
+  nav {
+    width: 50%;
+    ul {
+      align-items: center;
+      display: flex;
+      font-size: 1.2rem;
+      height: 4rem;
+      justify-content: center;
+      li {
+        margin-left: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import '../abstract/variables';
+
+.body {
+  background-color: $background-primary;
+  color: $letters-primary;
+}
+
+ul {
+  list-style: none;
+}
+
+a{
+  color: $letters-primary;
+  text-decoration: none;
+  &:hover{
+    color: $letters-hover-primary;
+  }
+}

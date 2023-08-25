@@ -1,0 +1,10 @@
+@import '../abstract/variables';
+
+.main {
+  align-items: center;
+  background-color: $background-secondary;
+  display: flex;
+  flex-direction: column;
+  min-height: $main-default-min-height;
+  margin: 0 7rem;
+}

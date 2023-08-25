@@ -1,7 +1,7 @@
 <?php
 namespace AlbuquerqueLucas\PhpTestRouting\Views;
 use Exception;
-class View {
+abstract class View {
   protected array $data = [];
 
   public function assign($key, $value):void
