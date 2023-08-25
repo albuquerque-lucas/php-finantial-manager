@@ -7,14 +7,19 @@ use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\GeneratedValue;
 #[Entity]
 class Project {
-  public readonly string $title;
   #[Id]
   #[GeneratedValue]
   #[Column]
   public readonly int $id;
   public function __construct(
     #[Column]
-    public readonly string $name
+    public readonly string $title,
+    #[Column]
+    public readonly string $description,
+    #[Column]
+    public readonly string $urlImage,
+    #[Column]
+    public readonly string $urlRepo
   ){
   }
 }
