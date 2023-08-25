@@ -10,7 +10,7 @@ class EntityManagerCreator {
   public static function create()
   {
     $config = ORMSetup::createAttributeMetadataConfiguration(
-      paths: array(__DIR__."/src/Entity"),
+      paths: array(__DIR__."/../Entity"),
       isDevMode: true,
   );
     $connection = DriverManager::getConnection([
