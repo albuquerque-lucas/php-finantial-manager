@@ -16,7 +16,7 @@
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="/projects">Projetos</a>
+      <a href="/products">Produtos</a>
     </li>
         <li>
       <a href="/financial">Gerenciamento</a>

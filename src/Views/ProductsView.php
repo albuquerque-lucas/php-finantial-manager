@@ -2,7 +2,7 @@
 
 namespace AlbuquerqueLucas\PhpTestRouting\Views;
 
-class ProjectsView extends View {
+class ProductsView extends View {
   public function render($template): void
   {
     parent::render($template);

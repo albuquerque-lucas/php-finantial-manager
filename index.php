@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 use AlbuquerqueLucas\PhpTestRouting\Controller\FrontController;
-use AlbuquerqueLucas\PhpTestRouting\Controller\ProjectsController;
+use AlbuquerqueLucas\PhpTestRouting\Controller\ProductsController;
 use AlbuquerqueLucas\PhpTestRouting\Infrastructure\Router;
 use Dotenv\Dotenv;
 
@@ -10,9 +10,9 @@ $dotenv->safeLoad();
 
 $router = new Router();
 $frontController = new FrontController();
-$projectsController = new ProjectsController();
+$productsController = new ProductsController();
 
 $router->get('/', [$frontController, 'renderHome']);
-$router->get('/projects', [$projectsController, 'renderProjectsPublic']);
+$router->get('/products', [$productsController, 'renderProductsPublic']);
 
 $router->run();
