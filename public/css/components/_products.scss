@@ -2,26 +2,61 @@
 
 
 .product-form {
-  align-items: center;
   background-color: $background-secondary;
   border-bottom: 2px solid white;
   display: flex;
   flex-direction: column;
-  height: 10rem;
+  height: 30vh;
   justify-content: center;
   margin-bottom: 3rem;
-  padding: 1rem 3rem;
-  width: 50vw;
+  padding: 1rem;
+  width: 60%;
   form {
-    background-color: red;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1rem;
     width: 100%;
 
     .project-first-inputs {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      input {
+        margin: 0.3rem 0.3rem 0.3rem 0.3rem;
+      }
+    }
+    .project-second-inputs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      label {
+        font-weight: 700;
+        margin: 0.25rem 0;
+      }
+      input {
+        width: 30vw;
+        margin-bottom: 0.5rem;
+      }
+      select {
+        margin-bottom: 0.5rem;
+        text-align: center;
+        height: 2rem;
+        width: 15vw;
+      }
+    }
+    button {
+      background-color: transparent;
+      border: 2px solid $letters-primary;
+      color: $letters-primary;
+      font-weight: 700;
+      margin: 0.25rem 0;
+      width: 15rem;
+      &:hover {
+        background-color: $background-hover-primary;
+        border-color: $letters-hover-primary;
+        color: $letters-hover-primary;
+      }
     }
   }
 }
