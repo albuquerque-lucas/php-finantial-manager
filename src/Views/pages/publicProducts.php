@@ -16,7 +16,20 @@
         <ul class="product-list">
         <?php foreach($products as $product): ?>
           <li class="product-list-item">
-              <?= $product->title ?>
+            <div class="info">
+              <img src="<?= $product->urlImage?>" alt="" class="product-list-image">
+              <h6>
+                <?= $product->title ?>
+              </h6>
+              <h6>
+                Serie</br>
+                <?= $product->id ?>
+              </h6>
+              <h6>
+              Preco</br>
+                <?= $product->price ?>
+              </h6>
+            </div>
           </li>
         <?php endforeach; ?>
       </ul>
