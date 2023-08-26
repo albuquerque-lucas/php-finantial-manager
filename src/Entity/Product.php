@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\GeneratedValue;
 #[Entity]
-class Project {
+class Product {
   #[Id]
   #[GeneratedValue]
   #[Column]
@@ -17,9 +17,11 @@ class Project {
     #[Column]
     public readonly string $description,
     #[Column]
-    public readonly string $urlImage,
+    public readonly float $price,
     #[Column]
-    public readonly string $urlRepo
+    public readonly Category $category,
+    #[Column]
+    public readonly string $urlImage
   ){
   }
 }
