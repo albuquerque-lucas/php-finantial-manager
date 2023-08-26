@@ -19,8 +19,6 @@ class Product {
     #[Column]
     public readonly float $price,
     #[Column]
-    public readonly Category $category,
-    #[Column]
     public readonly string $urlImage
   ){
   }

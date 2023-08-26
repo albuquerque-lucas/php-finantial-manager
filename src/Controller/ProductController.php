@@ -6,7 +6,7 @@ use AlbuquerqueLucas\PhpTestRouting\Entity\Product;
 use AlbuquerqueLucas\PhpTestRouting\Helper\EntityManagerCreator;
 use AlbuquerqueLucas\PhpTestRouting\Views\ProductsView;
 
-class ProductsController {
+class ProductController {
   public function renderProductsPublic() {
     $entityManager = EntityManagerCreator::create();
     $productsRepository = $entityManager->getRepository(Product::class);
@@ -14,6 +14,6 @@ class ProductsController {
     $view = new ProductsView();
     $view->assign('title', 'Produtos | Financial Manager');
     $view->assign('projects', $products);
-    $view->render('publicProjects.php');
+    $view->render('publicProducts.php');
   }
 }
