@@ -1,6 +1,8 @@
 <?php
 
 namespace AlbuquerqueLucas\PhpTestRouting\Entity;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Id;
@@ -18,7 +20,19 @@ class Category {
     #[Column(type:'text')]
     public readonly string $description,
     #[OneToMany(targetEntity:Product::class, mappedBy:'category')]
-    public iterable $products
+    private readonly Collection $products
   ){
+    $this->products = new ArrayCollection();
+  }
+
+  public function addProduct(Product $product)
+  {
+    $this->products->add($product);
+    $product->setCategory($this);
+  }
+
+  public function products(): Collection
+  {
+    return $this->products;
   }
 }

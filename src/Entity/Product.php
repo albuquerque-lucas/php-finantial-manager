@@ -25,4 +25,9 @@ class Product {
     public Category $category
   ){
   }
+
+  public function setCategory(Category $category): void
+  {
+    $this->category = $category;
+  }
 }
