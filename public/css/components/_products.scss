@@ -1,0 +1,27 @@
+@import '../abstract/variables';
+
+
+.product-form {
+  align-items: center;
+  background-color: $background-secondary;
+  border-bottom: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding: 1rem 3rem;
+  width: 50vw;
+  form {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    .project-first-inputs {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

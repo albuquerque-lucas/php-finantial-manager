@@ -18,11 +18,12 @@
     <li>
       <a href="/products">Produtos</a>
     </li>
-        <li>
-      <a href="/financial">Gerenciamento</a>
+    <li>
+      <a href="/categories">Categorias</a>
     </li>
-        <li>
-      <a href="/contact">Contato</a>
+    <li>
+        <a href="/contact">Contato</a>
+    </li>
   </ul>
 </nav>
   </header>
