@@ -39,4 +39,15 @@ class ProductService {
       'status' => 'SUCCESS',
     ];
   }
+
+  public function serialize()
+  {
+    $entityManager = EntityManagerCreator::create();
+    $productsRepository = $entityManager->getRepository(Product::class);
+    $products = $productsRepository->findBy(['serial' => null]);
+    foreach ($products as $product):
+      $product->setSerial();
+    endforeach;
+    $entityManager->flush();
+  }
 }

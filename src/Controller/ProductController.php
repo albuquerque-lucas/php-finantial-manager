@@ -14,16 +14,24 @@ class ProductController {
     $this->middleware = new ProductMiddleware();
     $this->service = new ProductService();
   }
-  public function renderProductsPublic() {
+  public function renderProductsPublic()
+  {
     $data = $this->service->getAll();
     $view = new ProductsView();
     $view->assign('data', $data);
     $view->render('publicProducts.php');
   }
 
-  public function create() {
+  public function create()
+  {
     $body = $this->middleware->validate();
     $newProduct = $this->service->create($body);
+    header('Location: /products');
+  }
+
+  public function serialize()
+  {
+    $this->service->serialize();
     header('Location: /products');
   }
 }

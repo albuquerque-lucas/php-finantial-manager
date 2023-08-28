@@ -11,7 +11,13 @@
       <tbody>
         <?php foreach($data['products'] as $product): ?>
           <tr class="product-table-row">
-            <th class="product-table-cell" scope="row"><?= $product->serial ?? $product->id ?></th>
+            <th class="product-table-cell" scope="row">
+            <?php if ($product->serial() === null): ?>
+              <?= $product->id ?>
+            <?php else: ?>
+              <?= $product->serial() ?>
+            <?php endif; ?>
+            </th>
             <td class="product-table-cell">
               <img src="<?= $product->urlImage ?>" alt="" class="product-table-image">
             </td>

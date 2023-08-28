@@ -13,8 +13,8 @@ use Doctrine\ORM\Mapping\ManyToOne;
 class Product {
   #[Id, GeneratedValue, Column]
   public int $id;
-  #[Column(length:8, nullable:true)]
-  public readonly int $serial;
+  #[Column(length:8, nullable:true, options:["default" => null])]
+  private ?int $serial;
   public function __construct(
     #[Column]
     public readonly string $title,
@@ -38,5 +38,10 @@ class Product {
   {
       $serial = strval($this->category->serial) . strval(SerialGenerator::generateRandom(2)) . strval($this->id);
       $this->serial = intval($serial);
+  }
+
+  public function serial(): int | null
+  {
+      return $this->serial;
   }
 }
