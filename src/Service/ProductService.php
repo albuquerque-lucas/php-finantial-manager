@@ -34,6 +34,7 @@ class ProductService {
     $product = new Product($body['title'], $body['description'], $body['price'], $body['url-image'], $category);
     $entityManager->persist($product);
     $entityManager->flush();
+    $this->serialize();
     return [
       'data' => $product,
       'status' => 'SUCCESS',

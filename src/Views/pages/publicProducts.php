@@ -14,9 +14,6 @@
       <?php endif; ?>
     </section>
     <section class='product-display-head'>
-      <form action="/serialize-products" method="post">
-        <button>Serializar</button>
-      </form>
       <h1>Produtos</h1>
     </section>
     <section class="product-display">

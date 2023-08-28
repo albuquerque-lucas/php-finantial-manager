@@ -17,7 +17,6 @@ $categoriesController = new CategoriesController();
 $router->get('/', [$frontController, 'renderHome']);
 $router->get('/products', [$productsController, 'renderProductsPublic']);
 $router->post('/products', [$productsController, 'create']);
-$router->post('/serialize-products', [$productsController, 'serialize']);
 $router->get('/categories', [$categoriesController, 'renderCategoriesPublic']);
 $router->post('/categories', [$categoriesController, 'create']);
 
