@@ -29,7 +29,7 @@ class CategoryService {
     $categoriesRepository = $entityManager->getRepository(Category::class);
     $foundCategory = $categoriesRepository->findOneBy(['serial' => $body['serial']]);
     if(!$foundCategory) {
-      $newCategory = new Category($body['name'], $body['serial'], $body['description'], $body['product-list']);
+      $newCategory = new Category($body['name'], $body['serial'], $body['product-list']);
       $entityManager->persist($newCategory);
       $entityManager->flush();
       return [

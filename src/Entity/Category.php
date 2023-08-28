@@ -17,8 +17,6 @@ class Category {
     public string $name,
     #[Column(length:50)]
     public int $serial,
-    #[Column(type:'text')]
-    public string $description,
     #[OneToMany(targetEntity:Product::class, mappedBy:'category')]
     private Collection $products
   ){

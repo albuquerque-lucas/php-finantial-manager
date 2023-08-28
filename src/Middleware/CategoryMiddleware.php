@@ -10,7 +10,6 @@ class CategoryMiddleware {
     public function validate()
     {
       $name = filter_input(INPUT_POST, 'category-name', FILTER_SANITIZE_STRING);
-      $description = filter_input(INPUT_POST, 'category-description', FILTER_SANITIZE_STRING);
       $serial = SerialGenerator::generateRandom(3);
       $productList = new ArrayCollection();
       $validateBody = [
@@ -34,7 +33,6 @@ class CategoryMiddleware {
       } else {
         $body = [
           'name' => $name,
-          'description' => $description,
           'serial' => $serial,
           'product-list' => $productList,
       ];
