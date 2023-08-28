@@ -16,13 +16,12 @@ class CategoriesController {
   }
   public function renderCategoriesPublic() {
     $data = $this->service->getAll();
-    var_dump($_SESSION);
     $view = new CategoriesView();
     $view->assign('data', $data);
     $view->render('publicCategories.php');
   }
 
-  public function create():void
+  public function create()
   {
     $body = $this->middleware->validate();
     $result = $this->service->create($body);
