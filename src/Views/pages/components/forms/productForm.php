@@ -15,5 +15,5 @@
     </select>
     
   </div>
-  <button class="btn-send">Enviar</button>
+  <button class='form-button'>Enviar</button>
 </form>

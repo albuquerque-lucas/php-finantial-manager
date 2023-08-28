@@ -17,3 +17,19 @@ a{
     color: $letters-hover-primary;
   }
 }
+
+button {
+  background-color: transparent;
+  border: 2px solid $letters-primary;
+  color: $letters-primary;
+  font-weight: 700;
+  &:hover {
+    background-color: $background-hover-primary;
+    border-color: $letters-hover-primary;
+    color: $letters-hover-primary;
+  }
+}
+
+.form-button {
+  width: 15rem;
+}

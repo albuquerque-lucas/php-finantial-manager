@@ -23,7 +23,7 @@ class CategoriesController {
   {
     $name = filter_input(INPUT_POST, 'category-name', FILTER_SANITIZE_STRING);
     $description = filter_input(INPUT_POST, 'category-description', FILTER_SANITIZE_STRING);
-    $serial = SerialGenerator::generateRandom(8);
+    $serial = SerialGenerator::generateRandom(3);
     $productList = new ArrayCollection();
     $category = new Category($name, $serial, $description, $productList);
     $entityManager = EntityManagerCreator::create();
