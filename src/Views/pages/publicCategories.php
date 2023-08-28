@@ -6,7 +6,7 @@
       <?php require_once __DIR__ . '/components/forms/categoryForm.php'?>
     </section>
     <section class="category-display">
-      <?php if(!isset($data['categories'])):?>
+      <?php if(count($data['categories']) === 0):?>
         <h1>Nenhuma categoria cadastrada</h1>
       <?php else: ?>
       <ul class="category-list">

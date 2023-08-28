@@ -39,7 +39,6 @@ class CategoryMiddleware {
           'product-list' => $productList,
       ];
       }
-        
         return $body;
-    }
+      }
 }

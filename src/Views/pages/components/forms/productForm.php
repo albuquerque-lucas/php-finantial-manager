@@ -7,7 +7,7 @@
     <input type="text" name="product-description" placeholder="Breve descricao">
     <label for="product-category">Categoria:</label>
     <select name="product-category">
-      <?php foreach($categories as $category): ?>
+      <?php foreach($data['categories'] as $category): ?>
         <option value="<?= $category->id ?>">
           <?= $category->name ?>
         </option>
