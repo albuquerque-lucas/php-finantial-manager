@@ -18,6 +18,13 @@ class CategoryService {
   }
   public function create($body): array
   {
+    if (array_key_exists('error', $body)) {
+      return [
+        'message' => 'Nao foi possivel criar categoria',
+        'data' => $body['error'],
+        'status' => 'ERROR',
+      ];
+    }
     $entityManager = EntityManagerCreator::create();
     $categoriesRepository = $entityManager->getRepository(Category::class);
     $foundCategory = $categoriesRepository->findOneBy(['serial' => $body['serial']]);

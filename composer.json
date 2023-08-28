@@ -17,6 +17,7 @@
         "doctrine/orm": "2.16.1",
         "doctrine/dbal": "^3.2",
         "symfony/yaml": "^5.4",
-        "symfony/cache": "^5.4"
+        "symfony/cache": "^5.4",
+        "spatie/laravel-flash": "^1.9"
     }
 }

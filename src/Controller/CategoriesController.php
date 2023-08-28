@@ -2,13 +2,9 @@
 
 namespace AlbuquerqueLucas\PhpTestRouting\Controller;
 
-use AlbuquerqueLucas\PhpTestRouting\Entity\Category;
-use AlbuquerqueLucas\PhpTestRouting\Helper\EntityManagerCreator;
-use AlbuquerqueLucas\PhpTestRouting\Helper\SerialGenerator;
 use AlbuquerqueLucas\PhpTestRouting\Middleware\CategoryMiddleware;
 use AlbuquerqueLucas\PhpTestRouting\Service\CategoryService;
 use AlbuquerqueLucas\PhpTestRouting\Views\CategoriesView;
-use Doctrine\Common\Collections\ArrayCollection;
 
 class CategoriesController {
   private $middleware;
@@ -20,6 +16,7 @@ class CategoriesController {
   }
   public function renderCategoriesPublic() {
     $data = $this->service->getAll();
+    var_dump($_SESSION);
     $view = new CategoriesView();
     $view->assign('data', $data);
     $view->render('publicCategories.php');
