@@ -6,11 +6,11 @@
       <?php require_once __DIR__ . '/components/forms/categoryForm.php'?>
     </section>
     <section class="category-display">
-      <?php if(!isset($categories)):?>
+      <?php if(!isset($data['categories'])):?>
         <h1>Nenhuma categoria cadastrada</h1>
       <?php else: ?>
       <ul class="category-list">
-        <?php foreach($categories as $category): ?>
+        <?php foreach($data['categories'] as $category): ?>
           <li class="category-list-item">
             <div class="info">
               <h6 class="category-code">
