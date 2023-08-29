@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\ORM\Mapping\OneToMany;
 #[Entity]
 class Category {
-  #[Id, GeneratedValue, Column]
+  #[Id, GeneratedValue, Column] 
   private int $id;
   public function __construct(
     #[Column(length:100)]
@@ -19,7 +19,8 @@ class Category {
     private int $serial,
     #[OneToMany(targetEntity:Product::class, mappedBy:'category')]
     private Collection $products
-  ){
+  )
+  {
     $this->products = new ArrayCollection();
   }
 

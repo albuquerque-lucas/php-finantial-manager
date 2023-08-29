@@ -26,7 +26,9 @@ class Product {
     private string $urlImage,
     #[ManyToOne(targetEntity:Category::class, inversedBy:'products')]
     private Category $category
-  ){
+  )
+  {
+    
   }
 
   public function setCategory(Category $category): void
