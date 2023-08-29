@@ -1,5 +1,9 @@
 <?php require_once __DIR__ . '/components/mainHeader.php';?>
   <div class="main-div-default">
+        <section class='message-display'>
+      <?php
+      ?>
+    </section>
     <section class='categories-form'>
       <h3>Adicionar categoria</h3>
       <?php require_once __DIR__ . '/components/forms/categoryForm.php'?>

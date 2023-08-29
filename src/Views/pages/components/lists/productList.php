@@ -2,7 +2,7 @@
     <thead>
       <tr>
         <th scope="col">Serial</th>
-        <th scope="col">Imagem</th>
+        <th scope="col">Imagem</th> 
         <th scope="col">Título</th>
         <th scope="col">Preço</th>
         <th scope="col">Categoria</th>
