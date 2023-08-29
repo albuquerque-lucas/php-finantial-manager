@@ -12,20 +12,20 @@ use Doctrine\ORM\Mapping\ManyToOne;
 #[Entity]
 class Product {
   #[Id, GeneratedValue, Column]
-  public int $id;
+  private int $id;
   #[Column(length:8, nullable:true, options:["default" => null])]
   private ?int $serial;
   public function __construct(
     #[Column]
-    public readonly string $title,
+    private string $title,
     #[Column(type:'text')]
     public readonly string $description,
     #[Column]
-    public readonly float $price,
+    private float $price,
     #[Column(length:300)]
-    public readonly string $urlImage,
+    private string $urlImage,
     #[ManyToOne(targetEntity:Category::class, inversedBy:'products')]
-    public Category $category
+    private Category $category
   ){
   }
 
@@ -39,9 +39,32 @@ class Product {
       $serial = strval($this->category->serial) . strval(SerialGenerator::generateRandom(2)) . strval($this->id);
       $this->serial = intval($serial);
   }
+  public function id()
+  {
+    return $this->id;
+  }
+
+  public function title()
+  {
+    return $this->title;
+  }
+  public function price()
+  {
+    return $this->price;
+  }
 
   public function serial(): int | null
   {
       return $this->serial;
+  }
+
+  public function category()
+  {
+    return $this->category;
+  }
+
+  public function image()
+  {
+    return $this->urlImage;
   }
 }

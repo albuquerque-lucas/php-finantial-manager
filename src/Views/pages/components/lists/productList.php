@@ -5,6 +5,8 @@
         <th scope="col">Imagem</th>
         <th scope="col">Título</th>
         <th scope="col">Preço</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Editar/Excluir</th>
       </tr>
     </thead>
     <?php if (isset($data['products'])): ?>
@@ -12,17 +14,37 @@
         <?php foreach($data['products'] as $product): ?>
           <tr class="product-table-row">
             <th class="product-table-cell" scope="row">
-            <?php if ($product->serial() === null): ?>
-              <?= $product->id ?>
-            <?php else: ?>
-              <?= $product->serial() ?>
-            <?php endif; ?>
+              <?= $product->serial(); ?>
             </th>
             <td class="product-table-cell">
-              <img src="<?= $product->urlImage ?>" alt="" class="product-table-image">
+              <img
+              src="<?= $product->image(); ?>"
+              alt=""
+              class="product-table-image">
             </td>
-            <td class="product-table-cell"><?= $product->title ?></td>
-            <td class="product-table-cell"><?= $product->price ?></td>
+            <td class="product-table-cell"><?= $product->title(); ?></td>
+            <td class="product-table-cell"><?= $product->price(); ?></td>
+            <td class="product-table-cell">
+              <?= $product->category()->name(); ?>
+            </td>
+            <td class="product-table-cell">
+            <form action="/update-product">
+                <input type="hidden" value=<?= $product->id(); ?>>
+                <button>
+                  Editar
+                </button>
+              </form>
+              <form action="/delete-product" method="post">
+                <input
+                type="hidden"
+                value=<?= $product->id(); ?>
+                name="product-delete"
+                >
+                <button type="submit">
+                  Excluir
+                </button>
+              </form>
+            </td>
           </tr>
         <?php endforeach; ?>
       </tbody>

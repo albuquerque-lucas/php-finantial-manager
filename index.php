@@ -15,9 +15,16 @@ $productsController = new ProductController();
 $categoriesController = new CategoriesController();
 
 $router->get('/', [$frontController, 'renderHome']);
+$router->get('/not-found', [$frontController, 'renderNotFound']);
 $router->get('/products', [$productsController, 'renderProductsPublic']);
 $router->post('/products', [$productsController, 'create']);
+$router->post('/delete-product', [$productsController, 'delete']);
 $router->get('/categories', [$categoriesController, 'renderCategoriesPublic']);
 $router->post('/categories', [$categoriesController, 'create']);
+
+$router->addNotFoundHandler(function () {
+  header('Location: /not-found');
+  exit();
+});
 
 $router->run();

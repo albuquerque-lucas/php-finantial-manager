@@ -14,7 +14,7 @@ class ProductController {
     $this->middleware = new ProductMiddleware();
     $this->service = new ProductService();
   }
-  public function renderProductsPublic()
+  public function renderProductsPublic(): void
   {
     $data = $this->service->getAll();
     $view = new ProductsView();
@@ -22,16 +22,23 @@ class ProductController {
     $view->render('publicProducts.php');
   }
 
-  public function create()
+  public function create(): void
   {
     $body = $this->middleware->validate();
     $newProduct = $this->service->create($body);
     header('Location: /products');
   }
 
-  public function serialize()
+  public function serialize(): void
   {
     $this->service->serialize();
+    header('Location: /products');
+  }
+
+  public function delete(): void
+  {
+    $id = filter_input(INPUT_POST, 'product-delete', FILTER_VALIDATE_INT);
+    $data = $this->service->delete($id);
     header('Location: /products');
   }
 }

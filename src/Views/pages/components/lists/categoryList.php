@@ -14,7 +14,7 @@
             <th class="category-table-cell" scope="row">
               <?= $category->serial  ?>
             </th>
-            <td class="category-table-cell"><?= $category->name?></td>
+            <td class="category-table-cell"><?= $category->name(); ?></td>
             <td class="category-table-cell"><?= count($category->products()) ?></td>
             <td>
               <button>Editar</button>

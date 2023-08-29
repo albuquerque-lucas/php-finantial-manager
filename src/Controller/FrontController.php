@@ -10,4 +10,10 @@ class FrontController {
     $view->assign('title', 'Pagina Inicial');
     $view->render('publicHome.php');
   }
+
+  public function renderNotFound() {
+    $view = new HomeView();
+    $view->assign('title', 'Pagina Inicial');
+    $view->render('notFound.php');
+  }
 }

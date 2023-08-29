@@ -14,7 +14,7 @@ class Category {
   public int $id;
   public function __construct(
     #[Column(length:100)]
-    public string $name,
+    private string $name,
     #[Column(length:50)]
     public int $serial,
     #[OneToMany(targetEntity:Product::class, mappedBy:'category')]
@@ -32,5 +32,10 @@ class Category {
   public function products(): Collection
   {
     return $this->products;
+  }
+
+  public function name()
+  {
+    return $this->name;
   }
 }

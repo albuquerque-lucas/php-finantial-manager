@@ -9,7 +9,7 @@
     <select name="product-category">
       <?php foreach($data['categories'] as $category): ?>
         <option value="<?= $category->id ?>">
-          <?= $category->name ?>
+          <?= $category->name(); ?>
         </option>
       <?php endforeach; ?>
     </select>

@@ -41,6 +41,18 @@ class ProductService {
     ];
   }
 
+  public function delete(int $id):array
+  {
+    $entityManager = EntityManagerCreator::create();
+    $product = $entityManager->getPartialReference(Product::class, $id);
+    $entityManager->remove($product);
+    $entityManager->flush();
+    return [
+      'data' => $id,
+      'status' => 'SUCCESS',
+    ];
+  }
+
   public function serialize()
   {
     $entityManager = EntityManagerCreator::create();

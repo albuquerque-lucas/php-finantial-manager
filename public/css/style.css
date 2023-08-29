@@ -128,16 +128,11 @@ button:hover {
 .product-display-head {
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  margin: 1rem 0 3rem 0;
+  justify-content: center;
+  margin: 1rem 0;
   padding: 0.2rem 1rem;
   position: relative;
   width: 100%;
-}
-.product-display-head h1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .product-display {
@@ -149,7 +144,6 @@ button:hover {
 }
 .product-display .product-table-image {
   width: 6rem;
-  max-width: 15rem;
 }
 
 .categories-form {
