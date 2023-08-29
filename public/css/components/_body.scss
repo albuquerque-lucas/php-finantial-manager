@@ -29,6 +29,27 @@ button {
     color: $letters-hover-primary;
   }
 }
+.page-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40rem;
+  width: 100%;
+}
+
+.page-display-head {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 3rem;
+  padding: .2rem 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.page-table {
+  text-align: center;
+}
 
 .form-button {
   width: 15rem;

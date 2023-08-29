@@ -22,7 +22,7 @@
       <a href="/categories">Categorias</a>
     </li>
     <li>
-        <a href="/contact">Contato</a>
+        <a href="/suppliers">Fornecedores</a>
     </li>
   </ul>
 </nav>

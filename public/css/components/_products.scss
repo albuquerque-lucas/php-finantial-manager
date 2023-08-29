@@ -60,14 +60,20 @@
   position: relative;
   width: 100%;
 }
+  .product-table {
+    text-align: center;
+  }
 
-.product-display {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 20rem;
-  width: 100%;
   .product-table-image {
-    width: 6rem;
+    height: 4rem;
+  }
+
+.forms-table-cell {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 5.2rem;
+  form {
+    margin: 0 .5rem;
   }
 }

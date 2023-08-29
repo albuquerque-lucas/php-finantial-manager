@@ -1,4 +1,3 @@
-
 <?php require_once __DIR__ . '/components/mainHeader.php';?>
   <div class="main-div-default">
     <section class='message-display'>
@@ -13,10 +12,10 @@
           <?php require_once __DIR__ . '/components/forms/productForm.php' ?>
       <?php endif; ?>
     </section>
-    <section class='product-display-head'>
+    <section class='page-display-head'>
       <h1>Produtos</h1>
     </section>
-    <section class="product-display">
+    <section class="page-display">
       <?php require_once __DIR__ . '/components/lists/productList.php';?>
     </section>
   </div>

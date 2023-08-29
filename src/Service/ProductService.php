@@ -44,7 +44,7 @@ class ProductService {
   public function delete(int $id):array
   {
     $entityManager = EntityManagerCreator::create();
-    $product = $entityManager->getPartialReference(Product::class, $id);
+    $product = $entityManager->find(Product::class, $id);
     $entityManager->remove($product);
     $entityManager->flush();
     return [

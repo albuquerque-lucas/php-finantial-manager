@@ -18,7 +18,7 @@ class CategoriesController {
     $data = $this->service->getAll();
     $view = new CategoriesView();
     $view->assign('data', $data);
-    $view->render('publicCategories.php');
+    $view->render('categories');
   }
 
   public function create()

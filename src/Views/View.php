@@ -11,7 +11,7 @@ abstract class View {
 
   public function render($template): void
   {
-    $templatePath = __DIR__ . "/pages/" . $template;
+    $templatePath = __DIR__ . "/pages/" . $template . '.php';
 
     if (!file_exists($templatePath)) {
       throw new Exception("Template não encontrado: $template");

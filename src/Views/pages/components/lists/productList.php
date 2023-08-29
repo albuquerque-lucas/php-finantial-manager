@@ -1,4 +1,4 @@
-<table class="product-table table table-dark table-hover">
+<table class="page-table table table-dark table-hover">
     <thead>
       <tr>
         <th scope="col">Serial</th>
@@ -18,7 +18,7 @@
             </th>
             <td class="product-table-cell">
               <img
-              src="<?= $product->image(); ?>"
+              src="<?= $product->image(); ?>" 
               alt=""
               class="product-table-image">
             </td>
@@ -27,23 +27,23 @@
             <td class="product-table-cell">
               <?= $product->category()->name(); ?>
             </td>
-            <td class="product-table-cell">
-            <form action="/update-product">
-                <input type="hidden" value=<?= $product->id(); ?>>
-                <button>
-                  Editar
-                </button>
-              </form>
-              <form action="/delete-product" method="post">
-                <input
-                type="hidden"
-                value=<?= $product->id(); ?>
-                name="product-delete"
-                >
-                <button type="submit">
-                  Excluir
-                </button>
-              </form>
+            <td class="product-table-cell forms-table-cell">
+              <form action="/update-product">
+                  <input type="hidden" value=<?= $product->id(); ?>>
+                  <button>
+                    Editar
+                  </button>
+                </form>
+                <form action="/delete-product" method="post">
+                  <input
+                  type="hidden"
+                  value=<?= $product->id(); ?>
+                  name="product-delete"
+                  >
+                  <button>
+                    Excluir
+                  </button>
+                </form>
             </td>
           </tr>
         <?php endforeach; ?>

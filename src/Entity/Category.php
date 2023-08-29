@@ -11,19 +11,24 @@ use Doctrine\ORM\Mapping\OneToMany;
 #[Entity]
 class Category {
   #[Id, GeneratedValue, Column]
-  public int $id;
+  private int $id;
   public function __construct(
     #[Column(length:100)]
     private string $name,
     #[Column(length:50)]
-    public int $serial,
+    private int $serial,
     #[OneToMany(targetEntity:Product::class, mappedBy:'category')]
     private Collection $products
   ){
     $this->products = new ArrayCollection();
   }
 
-  public function addProduct(Product $product)
+  public function id(): int
+  {
+    return $this->id;
+  }
+
+  public function addProduct(Product $product): void
   {
     $this->products->add($product);
     $product->setCategory($this);
@@ -34,8 +39,12 @@ class Category {
     return $this->products;
   }
 
-  public function name()
+  public function name(): string
   {
     return $this->name;
+  }
+  public function serial(): int
+  {
+    return $this->serial;
   }
 }

@@ -8,12 +8,12 @@ class FrontController {
   public function renderHome() {
     $view = new HomeView();
     $view->assign('title', 'Pagina Inicial');
-    $view->render('publicHome.php');
+    $view->render('home');
   }
 
   public function renderNotFound() {
     $view = new HomeView();
     $view->assign('title', 'Pagina Inicial');
-    $view->render('notFound.php');
+    $view->render('notFound');
   }
 }

@@ -8,7 +8,7 @@
     <label for="product-category">Categoria:</label>
     <select name="product-category">
       <?php foreach($data['categories'] as $category): ?>
-        <option value="<?= $category->id ?>">
+        <option value="<?= $category->id(); ?>">
           <?= $category->name(); ?>
         </option>
       <?php endforeach; ?>

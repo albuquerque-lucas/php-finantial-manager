@@ -19,7 +19,7 @@ class ProductController {
     $data = $this->service->getAll();
     $view = new ProductsView();
     $view->assign('data', $data);
-    $view->render('publicProducts.php');
+    $view->render('products');
   }
 
   public function create(): void
