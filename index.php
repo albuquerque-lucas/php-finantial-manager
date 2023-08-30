@@ -21,10 +21,14 @@ $router->get('/not-found', [$frontController, 'renderNotFound']);
 $router->get('/products', [$productsController, 'renderProductsPublic']);
 $router->post('/products', [$productsController, 'create']);
 $router->post('/delete-product', [$productsController, 'delete']);
-$router->get('/categories', [$categoriesController, 'renderCategoriesPublic']);
-$router->post('/categories', [$categoriesController, 'create']);
+$router->get('/categories', [$categoriesController, 'renderProductCategories']);
+$router->post('/categories', [$categoriesController, 'createProductCategory']);
 $router->get('/suppliers', [$suppliersController, 'renderSuppliers']);
 $router->get('/create-supplier', [$suppliersController, 'renderCreate']);
+$router->get('/phone-categories', [$categoriesController, 'renderPhoneCategories']);
+$router->post('/phone-categories', [$categoriesController, 'createPhoneCategories']);
+$router->get('/address-categories', [$categoriesController, 'renderAddressCategories']);
+$router->post('/address-categories', [$categoriesController, 'createAddressCategory']);
 
 $router->addNotFoundHandler(function () {
   header('Location: /not-found');

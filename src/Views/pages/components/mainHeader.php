@@ -19,10 +19,16 @@
       <a href="/products">Produtos</a>
     </li>
     <li>
-      <a href="/categories">Categorias</a>
+      <a href="/categories">Categorias de produto</a>
     </li>
     <li>
         <a href="/suppliers">Fornecedores</a>
+    </li>
+    <li>
+        <a href="/address-categories">Categorias de endereco</a>
+    </li>
+    <li>
+        <a href="/phone-categories">Categorias de telefone</a>
     </li>
   </ul>
 </nav>

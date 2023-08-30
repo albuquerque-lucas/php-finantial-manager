@@ -2,9 +2,8 @@
 namespace AlbuquerqueLucas\PhpTestRouting\Service;
 
 use AlbuquerqueLucas\PhpTestRouting\Entity\Category;
-use AlbuquerqueLucas\PhpTestRouting\Entity\Product;
 use AlbuquerqueLucas\PhpTestRouting\Helper\EntityManagerCreator;
-class CategoryService {
+class ProductCategoryService {
   public function getAll(): array
   {
     $entityManager = EntityManagerCreator::create();
@@ -29,7 +28,7 @@ class CategoryService {
     $categoriesRepository = $entityManager->getRepository(Category::class);
     $foundCategory = $categoriesRepository->findOneBy(['serial' => $body['serial']]);
     if(!$foundCategory) {
-      $newCategory = new Category($body['name'], $body['serial'], $body['product-list']);
+      $newCategory = new Category($body['name'], $body['serial'], $body['list']);
       $entityManager->persist($newCategory);
       $entityManager->flush();
       return [

@@ -11,11 +11,11 @@ class CategoryMiddleware {
     {
       $name = filter_input(INPUT_POST, 'category-name', FILTER_SANITIZE_STRING);
       $serial = SerialGenerator::generateRandom(3);
-      $productList = new ArrayCollection();
+      $list = new ArrayCollection();
       $validateBody = [
         'name' => $name,
         'serial' => $serial,
-        'product-list' => $productList,
+        'list' => $list,
     ];
       $errorMessages = [];
 
@@ -34,7 +34,7 @@ class CategoryMiddleware {
         $body = [
           'name' => $name,
           'serial' => $serial,
-          'product-list' => $productList,
+          'list' => $list,
       ];
       }
         return $body;

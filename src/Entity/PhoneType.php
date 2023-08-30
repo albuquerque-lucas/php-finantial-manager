@@ -16,24 +16,32 @@ class PhoneType {
   public function __construct(
     #[Column]
     private string $name,
+    #[Column]
+    private int $serial,
     #[OneToMany(targetEntity:PhoneNumber::class, mappedBy:'phoneType')]
     private Collection $phoneNumbers
     )
   {
     $this->phoneNumbers = new ArrayCollection();
   }
+  public function id(): string
+  {
+    return $this->id;
+  }
   public function name(): string
   {
     return $this->name;
   }
-
+  public function serial(): string
+  {
+    return $this->serial;
+  }
   public function addNumber(PhoneNumber $phoneNumber): void
   {
     $this->phoneNumbers->add($phoneNumber);
     $phoneNumber->setType($this);
   }
-
-  public function phoneList(): Collection
+  public function phones(): Collection
   {
     return $this->phoneNumbers;
   }

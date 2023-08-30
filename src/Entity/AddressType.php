@@ -16,15 +16,25 @@ class AddressType {
   public function __construct(
     #[Column]
     private string $name,
-    #[OneToMany(targetEntity:Address::class, mappedBy:'typeAddress')]
+    #[Column]
+    private int $serial,
+    #[OneToMany(targetEntity:Address::class, mappedBy:'addressType')]
     private Collection $addresses
     )
   {
     $this->addresses = new ArrayCollection();
   }
+  public function id(): string
+  {
+    return $this->id;
+  }
   public function name(): string
   {
     return $this->name;
+  }
+  public function serial(): string
+  {
+    return $this->serial;
   }
   public function addAddress(Address $address): void
   {
