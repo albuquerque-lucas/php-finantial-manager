@@ -10,4 +10,10 @@ class SuppliersController {
     $view->assign('title', 'Fornecedores | Financial Manager');
     $view->render('suppliers');
   }
+
+  public function renderCreate() {
+    $view = new SuppliersView();
+    $view->assign('title', 'Fornecedores | Financial Manager');
+    $view->render('create-supplier');
+  }
 }

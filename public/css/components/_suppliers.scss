@@ -1,0 +1,81 @@
+@import '../abstract/variables';
+
+.suppliers-header {
+  min-height: 20vh;
+  justify-content: space-between;
+
+  .button-box {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    width: 35%;
+  }
+  h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.suppliers-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 60%;
+  .supplier-first-inputs, .supplier-second-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+
+  .telephone-inputs {
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    padding: 0 1rem;
+    width: 55%;
+    label {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .address-inputs {
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  .address-inputs .address-field{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+.create-form-header {
+  align-items: center;
+  display: flex;
+  min-height: 20vh;
+  width: 100%;
+  .button-box {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 35%;
+  }
+  h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.create-container {
+  min-height: 110vh;
+}

@@ -54,6 +54,12 @@ button:hover {
   width: 15rem;
 }
 
+.create-container {
+  margin: 1rem;
+  padding: 1rem;
+  min-height: 40vh;
+}
+
 .header {
   align-items: center;
   background-color: rgb(10, 11, 12);
@@ -61,7 +67,7 @@ button:hover {
   display: flex;
   height: 15vh;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   padding: 0 5rem;
 }
 .header h1:hover {
@@ -83,11 +89,12 @@ button:hover {
 
 .main {
   align-items: center;
-  background-color: rgb(30, 33, 36);
+  background-color: rgb(23, 27, 29);
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   min-height: 70vh;
-  margin: 0 7rem;
+  margin: 0 3rem;
 }
 
 .main-div-default {
@@ -103,7 +110,7 @@ button:hover {
 }
 
 .product-form {
-  background-color: rgb(30, 33, 36);
+  background-color: rgb(23, 27, 29);
   border-bottom: 2px solid white;
   display: flex;
   flex-direction: column;
@@ -213,6 +220,82 @@ button:hover {
   align-items: center;
   min-height: 40rem;
   width: 100%;
+}
+
+.suppliers-header {
+  min-height: 20vh;
+  justify-content: space-between;
+}
+.suppliers-header .button-box {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 35%;
+}
+.suppliers-header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.suppliers-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 60%;
+}
+.suppliers-form .supplier-first-inputs, .suppliers-form .supplier-second-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.suppliers-form .telephone-inputs {
+  display: flex;
+  justify-content: space-between;
+  height: 7rem;
+  padding: 0 1rem;
+  width: 55%;
+}
+.suppliers-form .telephone-inputs label {
+  display: flex;
+  flex-direction: column;
+}
+.suppliers-form .address-inputs {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.suppliers-form .address-inputs .address-field {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.create-form-header {
+  align-items: center;
+  display: flex;
+  min-height: 20vh;
+  width: 100%;
+}
+.create-form-header .button-box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 35%;
+}
+.create-form-header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.create-container {
+  min-height: 110vh;
 }
 
 .main-footer {

@@ -24,6 +24,7 @@ $router->post('/delete-product', [$productsController, 'delete']);
 $router->get('/categories', [$categoriesController, 'renderCategoriesPublic']);
 $router->post('/categories', [$categoriesController, 'create']);
 $router->get('/suppliers', [$suppliersController, 'renderSuppliers']);
+$router->get('/create-supplier', [$suppliersController, 'renderCreate']);
 
 $router->addNotFoundHandler(function () {
   header('Location: /not-found');
