@@ -3,11 +3,9 @@
 namespace AlbuquerqueLucas\PhpTestRouting\Middleware;
 
 class ProductMiddleware {
-    public function validate() {
+    public function validate(): array
+    {
         $title = filter_input(INPUT_POST, 'product-title', FILTER_SANITIZE_STRING);
-        if ($title === '') {
-            $title = null;
-        }
         $description = filter_input(INPUT_POST, 'product-description', FILTER_SANITIZE_STRING);
         $price = floatval(filter_input(INPUT_POST, 'product-price', FILTER_DEFAULT));
         $categoryId = filter_input(INPUT_POST, 'product-category', FILTER_DEFAULT);
